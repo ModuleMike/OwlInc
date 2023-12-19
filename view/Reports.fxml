@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #003057;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Lubomski_WGU_C195.controller.ReportsController">
+   <children>
+      <VBox prefHeight="800.0" prefWidth="1200.0">
+         <children>
+            <HBox maxHeight="85.0" maxWidth="1200.0" minHeight="85.0" minWidth="1200.0" prefHeight="85.0" prefWidth="1200.0">
+               <children>
+                  <Label prefHeight="45.0" prefWidth="804.0" text="Owl Environmental Services" textFill="#f6be00">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="30.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="TOP_RIGHT" maxHeight="53.0" maxWidth="386.0" minHeight="53.0" minWidth="386.0" prefHeight="53.0" prefWidth="386.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="reports_MainMenu_Button" mnemonicParsing="false" onAction="#onAction_Reports_MainMenu" prefHeight="20.0" prefWidth="95.0" style="-fx-background-color: #327DA9;" text="Main Menu" textFill="WHITE">
+                           <font>
+                              <Font name="Lucida Sans Demibold Roman" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="reports_LogOff_Button1" mnemonicParsing="false" onAction="#onAction_Reports_LogOff" prefHeight="20.0" prefWidth="95.0" style="-fx-background-color: #327DA9;" text="Log Off" textFill="WHITE">
+                           <font>
+                              <Font name="Lucida Sans Demibold Roman" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="reports_Exit_Button" mnemonicParsing="false" onAction="#onAction_Reports_Exit" prefHeight="20.0" prefWidth="95.0" style="-fx-background-color: #327DA9;" text="Exit" textFill="WHITE">
+                           <font>
+                              <Font name="Lucida Sans Demibold Roman" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <TabPane maxHeight="716.0" maxWidth="1200.0" minHeight="716.0" minWidth="1200.0" prefHeight="716.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Report 1">
+                  <content>
+                    <AnchorPane maxWidth="1200.0" minHeight="0.0" minWidth="1200.0" prefHeight="528.0" prefWidth="1200.0">
+                           <children>
+                              <VBox layoutX="1.0" maxWidth="1200.0" minWidth="1000.0" prefHeight="687.0" prefWidth="1200.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="75.0" maxWidth="1200.0" minHeight="75.0" minWidth="1200.0" prefHeight="75.0" prefWidth="1200.0">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <children>
+                                          <Label alignment="CENTER" text="Report 1 - Total number of customer appointments by type and month" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="15.0" top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <TableView fx:id="reports_MonthlyType_TableView" maxHeight="420.0" maxWidth="1180.0" minHeight="420.0" minWidth="1180.0" prefHeight="420.0" prefWidth="1180.0">
+                                      <columns>
+                                        <TableColumn fx:id="report1_Month_Column" maxWidth="294.0" minWidth="294.0" prefWidth="294.0" text="Month" />
+                                        <TableColumn fx:id="report1_Type1_Column" maxWidth="294.0" minWidth="294.0" prefWidth="294.0" text="Planning Session Total" />
+                                          <TableColumn fx:id="report1_Type2_Column" maxWidth="294.0" minWidth="294.0" prefWidth="294.0" text="De-Briefing Total" />
+                                          <TableColumn fx:id="report1_MonthlyTotal_Column" maxWidth="294.0" minWidth="294.0" prefWidth="294.0" text="Combined Monthly Total" />
+                                      </columns>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <VBox.margin>
+                                          <Insets left="9.0" right="10.0" top="25.0" />
+                                       </VBox.margin>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Report 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutY="-1.0" prefHeight="689.0" prefWidth="1200.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" maxHeight="75.0" maxWidth="1200.0" minHeight="75.0" minWidth="1200.0" prefHeight="75.0" prefWidth="1200.0" spacing="50.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="Report 2 - Schedules By Contact" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <VBox.margin>
+                                          <Insets left="15.0" top="10.0" />
+                                       </VBox.margin>
+                                    </VBox>
+                                    <TableView fx:id="reports_Contact_TableView" maxHeight="420.0" maxWidth="1180.0" minHeight="420.0" minWidth="1180.0" prefHeight="420.0" prefWidth="1180.0">
+                                      <columns>
+                                        <TableColumn fx:id="report2_AppointmentID_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Appt ID" />
+                                          <TableColumn fx:id="report2_Type_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Type" />
+                                        <TableColumn fx:id="report2_Title_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Title" />
+                                          <TableColumn fx:id="report2_Description_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Description" />
+                                          <TableColumn fx:id="report2_Start_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Start Date / Time" />
+                                          <TableColumn fx:id="report2_End_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="End Date / Time" />
+                                          <TableColumn fx:id="report2_Location_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Location" />
+                                          <TableColumn fx:id="report2_CustomerID_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Customer ID" />
+                                          <TableColumn fx:id="report2_UserID_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="User ID" />
+                                      </columns>
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" top="26.0" />
+                                       </VBox.margin>
+                                    </TableView>
+                                    <HBox alignment="CENTER" maxHeight="150.0" maxWidth="1200.0" minHeight="150.0" minWidth="1200.0" prefHeight="150.0" prefWidth="1200.0" spacing="20.0">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label text="Select Contact " textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="report2_SelectContact_ComboBox" prefWidth="150.0" promptText="Select Contact..." />
+                                          <HBox alignment="CENTER" prefHeight="62.0" prefWidth="352.0">
+                                             <children>
+                                                <Label text="Total Appointments - " textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Lucida Sans Demibold Roman" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Text fx:id="report2_Total_Text" fill="#d70909" strokeType="OUTSIDE" strokeWidth="0.0" text="Unknown">
+                                                   <font>
+                                                      <Font name="Lucida Sans Demibold Roman" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets top="1.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets top="25.0" />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Report 3">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="687.0" prefWidth="1200.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" maxHeight="75.0" maxWidth="1200.0" minHeight="75.0" minWidth="1200.0" prefHeight="75.0" prefWidth="1200.0">
+                                       <children>
+                                          <Label text="Report 3 - Customer Engagement" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="15.0" top="10.0" />
+                                       </VBox.margin>
+                                    </VBox>
+                                    <TableView fx:id="reports_Customer_TableView" maxHeight="420.0" maxWidth="1180.0" minHeight="420.0" minWidth="1180.0" prefHeight="420.0" prefWidth="1180.0">
+                                       <columns>
+                                          <TableColumn fx:id="report3_AppointmentID_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Appt ID" />
+                                          <TableColumn fx:id="report3_Type_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Type" />
+                                          <TableColumn fx:id="report3_Title_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Title" />
+                                          <TableColumn fx:id="report3_Description_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Description" />
+                                          <TableColumn fx:id="report3_Start_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Start Date / Time" />
+                                          <TableColumn fx:id="report3_End_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="End Date / Time" />
+                                          <TableColumn fx:id="report3_Location_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Location" />
+                                          <TableColumn fx:id="report3_Contact_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="Contact" />
+                                          <TableColumn fx:id="report3_UserID_Column" maxWidth="131.0" minWidth="131.0" prefWidth="131.0" text="User ID" />
+                                       </columns>
+                                       <VBox.margin>
+                                          <Insets left="12.0" right="10.0" top="26.0" />
+                                       </VBox.margin>
+                                    </TableView>
+                                    <HBox alignment="CENTER" maxHeight="150.0" maxWidth="1200.0" minHeight="150.0" minWidth="1200.0" prefHeight="150.0" prefWidth="1200.0" spacing="20.0">
+                                       <children>
+                                          <Label text="Select Customer" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="report3_SelectCustomer_ComboBox" prefWidth="150.0" promptText="Select Customer..." />
+                                          <HBox alignment="CENTER" prefHeight="62.0" prefWidth="352.0">
+                                             <children>
+                                                <Label alignment="TOP_CENTER" text="Total Engagements  - " textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Lucida Sans Demibold Roman" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Text fx:id="report3_CustomerTotal_Text" fill="#d70909" strokeType="OUTSIDE" strokeWidth="0.0" text="Unknown">
+                                                   <font>
+                                                      <Font name="Lucida Sans Demibold Roman" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets top="1.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

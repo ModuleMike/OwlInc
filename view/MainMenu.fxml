@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #003057;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Lubomski_WGU_C195.controller.MainMenuController">
+   <children>
+      <VBox alignment="CENTER" maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0">
+         <children>
+            <HBox maxHeight="128.0" maxWidth="1200.0" minHeight="85.0" minWidth="1200.0" prefHeight="128.0" prefWidth="1200.0">
+               <children>
+                  <Label prefHeight="45.0" prefWidth="802.0" text="Owl Environmental Services" textFill="#f6be00">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="30.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="TOP_RIGHT" maxHeight="53.0" maxWidth="386.0" minHeight="53.0" minWidth="386.0" prefHeight="53.0" prefWidth="386.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="mainMenu_LogOff_Button" mnemonicParsing="false" onAction="#onAction_MainMenu_LogOff" prefHeight="20.0" prefWidth="95.0" style="-fx-background-color: #327DA9;" text="Log Off" textFill="WHITE">
+                           <font>
+                              <Font name="Lucida Sans Demibold Roman" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="mainMenu_Exit_Button" mnemonicParsing="false" onAction="#onAction_MainMenu_Exit" prefHeight="20.0" prefWidth="95.0" style="-fx-background-color: #327DA9;" text="Exit" textFill="WHITE">
+                           <font>
+                              <Font name="Lucida Sans Demibold Roman" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <TabPane prefHeight="760.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Appointments">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="613.0" prefWidth="1200.0">
+                           <children>
+                              <VBox layoutX="-1.0" layoutY="5.0" maxHeight="681.0" maxWidth="1200.0" minHeight="540.0" minWidth="1200.0" prefHeight="681.0" prefWidth="1200.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="65.0" maxWidth="1200.0" minHeight="65.0" minWidth="1200.0" prefHeight="65.0" prefWidth="1200.0" spacing="605.0">
+                                       <children>
+                                          <Label prefHeight="28.0" prefWidth="275.0" text="- Appointments -" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="67.0" prefWidth="268.0" spacing="15.0">
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Filter : " textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Lucida Sans Demibold Roman" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <RadioButton fx:id="mainMenu_FilterWeekly_RadioButton" mnemonicParsing="false" onAction="#onAction_MainMenu_FilterWeekly" text="Week" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Lucida Sans Demibold Roman" size="12.0" />
+                                                   </font>
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="ApptFilter_Group" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="mainMenu_FilterMonthly_RadioButton" mnemonicParsing="false" onAction="#onAction_MainMenu_FilterMonthly" text="Month" textFill="WHITE" toggleGroup="$ApptFilter_Group">
+                                                   <font>
+                                                      <Font name="Lucida Sans Demibold Roman" size="12.0" />
+                                                   </font>
+                                                </RadioButton>
+                                                <RadioButton fx:id="mainMenu_Reset_RadioButton" mnemonicParsing="false" onAction="#onAction_MainMenu_FilterReset" text="Reset" textFill="WHITE" toggleGroup="$ApptFilter_Group">
+                                                   <font>
+                                                      <Font name="Lucida Sans Demibold Roman" size="12.0" />
+                                                   </font>
+                                                </RadioButton>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="10.0" top="15.0" />
+                                       </padding>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </HBox>
+                                    <TableView fx:id="mainMenu_AppointmentTableView" maxHeight="420.0" maxWidth="1180.0" minHeight="420.0" minWidth="1180.0" prefHeight="420.0" prefWidth="118.0">
+                                      <columns>
+                                        <TableColumn fx:id="appointmentTable_ApptID_Column" prefWidth="85.0" text="Appt ID" />
+                                        <TableColumn fx:id="appointmentTable_Type_Column" prefWidth="100.0" text="Type" />
+                                          <TableColumn fx:id="appointmentTable_Title_Column" prefWidth="100.0" text="Title" />
+                                          <TableColumn fx:id="appointmentTable_Description_Column" prefWidth="154.0" text="Description" />
+                                          <TableColumn fx:id="appointmentTable_StartDateTime_Column" prefWidth="154.0" text="Start Date / Time" />
+                                          <TableColumn fx:id="appointmentTable_EndDateTime_Column" prefWidth="154.0" text="End Date / Time" />
+                                          <TableColumn fx:id="appointmentTable_Location_Column" prefWidth="154.0" text="Location" />
+                                          <TableColumn fx:id="appointmentTable_CustomerID_Column" prefWidth="85.0" text="Customer ID" />
+                                          <TableColumn fx:id="appointmentTable_Contact_Column" prefWidth="100.0" text="Contact" />
+                                          <TableColumn fx:id="appointmentTable_UserID_Column" prefWidth="92.0" text="User ID" />
+                                      </columns>
+                                       <VBox.margin>
+                                          <Insets left="10.0" right="10.0" top="5.0" />
+                                       </VBox.margin>
+                                    </TableView>
+                                    <HBox alignment="CENTER" maxHeight="191.0" maxWidth="1200.0" minHeight="120.0" minWidth="1200.0" prefHeight="191.0" prefWidth="1200.0" spacing="35.0">
+                                       <children>
+                                          <Button fx:id="mainMenu_AddAppointment_Button" alignment="CENTER" mnemonicParsing="false" onAction="#onAction_MainMenu_AddAppointment" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #327DA9;" text="Add" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="mainMenu_UpdateAppointment_Button" alignment="CENTER" mnemonicParsing="false" onAction="#onAction_MainMenu_UpdateAppointment" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #327DA9;" text="Update" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="mainMenu_DeleteAppointment_Button" alignment="CENTER" mnemonicParsing="false" onAction="#onAction_MainMenu_DeleteAppointment" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #327DA9;" text="Delete" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="mainMenu_Reports_Button" alignment="CENTER" mnemonicParsing="false" onAction="#onAction_MainMenu_Reports" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #840028;" text="Reports" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets top="1.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Customers">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutY="-1.0" maxHeight="690.0" maxWidth="1200.0" minHeight="540.0" minWidth="1200.0" prefHeight="690.0" prefWidth="1200.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="65.0" maxWidth="1200.0" minHeight="65.0" minWidth="1200.0" prefHeight="65.0" prefWidth="1200.0">
+                                       <children>
+                                          <Label prefHeight="28.0" prefWidth="255.0" text="- Customer - " textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="10.0" top="15.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <TableView fx:id="mainMenu_Customer_TableView" maxHeight="420.0" maxWidth="1180.0" minHeight="420.0" minWidth="1180.0" prefHeight="420.0" prefWidth="1180.0">
+                                       <columns>
+                                          <TableColumn fx:id="customerTable_ID_Column" prefWidth="168.0" text="ID" />
+                                          <TableColumn fx:id="customerTable_Name_Column" prefWidth="168.0" text="Name" />
+                                          <TableColumn fx:id="customerTable_PhoneNum_Column" prefWidth="168.0" text="Phone Number" />
+                                          <TableColumn fx:id="customerTable_Address_Column" prefWidth="168.0" text="Address" />
+                                          <TableColumn fx:id="customerTable_PostalCode_Column" prefWidth="168.0" text="Postal Code" />
+                                          <TableColumn fx:id="customerTable_Division_Column" prefWidth="168.0" text="Division" />
+                                          <TableColumn fx:id="customerTable_Country_Column" prefWidth="171.0" text="Country" />
+                                       </columns>
+                                       <VBox.margin>
+                                          <Insets left="9.0" right="10.0" top="6.0" />
+                                       </VBox.margin>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </TableView>
+                                    <HBox alignment="CENTER" maxHeight="196.0" maxWidth="1200.0" minHeight="120.0" minWidth="1200.0" prefHeight="196.0" prefWidth="1200.0" spacing="35.0">
+                                       <children>
+                                          <Button fx:id="mainMenu_AddCustomer_Button" mnemonicParsing="false" onAction="#onAction_MainMenu_AddCustomer" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #327DA9;" text="Add" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="mainMenu_UpdateCustomer_Button" mnemonicParsing="false" onAction="#onAction_MainMenu_UpdateCustomer" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #327DA9;" text="Update" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="mainMenu_DeleteCustomer_Button" mnemonicParsing="false" onAction="#onAction_MainMenu_DeleteCustomer" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #327DA9;" text="Delete" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="mainMenu_Reports_Button1" alignment="CENTER" mnemonicParsing="false" onAction="#onAction_MainMenu_Reports" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #840028;" text="Reports" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lucida Sans Demibold Roman" size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets right="2.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
